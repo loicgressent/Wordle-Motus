@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 id="titre">M O T U S</h1>
+    <p>Indice → <span id="clue"></span></p>
+    <p id="solutionLine">Solution → <span id="solution"></span></p>
+    <div id="grille"></div>
+
+    <div id="legende">
+        <div class="legend-line">
+            <label class="switch">
+                <input type="checkbox" id="toggleClue">
+                <span class="slider"></span> Afficher la première lettre
+            </label>
+        </div>
+        <div class="legend-line">
+            <div class="carre" id="green"></div><span>Lettre bien placée</span>
+        </div>
+        <div class="legend-line">
+            <div class="carre" id="yellow"></div><span>Lettre mal placée</span>
+        </div>
+        <div class="legend-line">
+            <div class="carre" id="gray"></div><span>Lettre non présente</span>
+        </div>
+    </div>
+
+
+    <h2 id="victory">Gagné!</h2>
+
+    <input type="text" name="userInput" id="userInput" placeholder="Trouvez le mot!" autocomplete="off">
+
+    <button id="replayButton">Rejouer</button>
+
+</body>
+<script src="script.js"></script>
+
+</html>

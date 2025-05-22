@@ -1,0 +1,178 @@
+*{
+  font-family: "Proxima Nova";
+  background-color: #ddd;
+}
+
+#titre {
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #aaa;
+}
+
+#solution{
+  font-weight: 800;
+}
+
+h2{
+  text-align: center;
+  display: none;
+}
+
+#userInput {
+  width: 250px;
+  padding: 10px 15px;
+  border: 2px solid #2575fc;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  outline: none;
+  display: block;
+  margin: 0 auto;
+  transition: border-color .3 ease, box-shadow .3 ease;
+}
+#userInput:focus {
+  border-color: #6a11cb;
+  box-shadow: 0 0 8px rgba(106, 17, 203, 0.7);
+}
+
+/* Bouton rejouer */
+#replayButton {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform .1s ease, box-shadow .2 ease;
+  font-size: larger;
+  margin: 10px auto;
+  display: none;
+}
+
+#replayButton:hover{
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+}
+
+#replayButton:active{
+  transform: scale(0.98);
+}
+/* Bouton rejouer */
+
+p{
+  text-align: center;
+  font-size: 25px;
+}
+
+#clue{
+  filter: blur(10px);
+  color: black;
+  cursor: pointer;
+  transition: filter .3s, color .3s;
+}
+
+#clue.reveal{
+  filter: blur(0);
+  color: black;
+}
+
+#container{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+#grille {
+  display: grid;
+  gap: 5px;
+  justify-content: space-around;
+}
+
+#legende{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 30px 0 30px 0;
+}
+
+.legend-line{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.carre{
+  width: 20px;
+  height: 20px;
+  margin: 5px 0px;
+}
+
+#green{
+    background-color: #568D4B;
+}
+#yellow{
+    background-color: #D5BB56;
+}
+#gray{
+    background-color: gray;
+}
+
+.row {
+  display: grid;
+  gap: 5px;
+}
+
+.cell {
+  --cell-height-width: 60px;
+  width: var(--cell-height-width);
+  height: var(--cell-height-width);
+  line-height: var(--cell-height-width);
+  border: 1px solid #111;
+  border-radius: 10px;
+  text-align: center;
+  font-size: calc(var(--cell-height-width) / 2);
+}
+
+.pop{
+  transform: scale(1.2);
+  transition: transform .1s;
+}
+
+
+/* Switch type iOs */
+.switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  cursor: pointer;
+}
+.switch input {
+  display: none;
+}
+.slider {
+  width: 40px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 20px;
+  position: relative;
+  transition: background-color 0.2s;
+}
+.slider::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background-color: white;
+  border-radius: 50%;
+  top: 1px;
+  left: 1px;
+  transition: transform 0.2s;
+}
+input:checked + .slider {
+  background-color: #4caf50;
+}
+input:checked + .slider::before {
+  transform: translateX(20px);
+}
+/* Switch type iOs */
