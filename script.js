@@ -7,8 +7,9 @@ let userInput = document.getElementById("userInput");
 let clue = document.getElementById("clue");
 let h2 = document.getElementById("victory");
 let replayButton = document.getElementById("replayButton");
-let solution = document.getElementById("solution")
-let solutionLine = document.getElementById("solutionLine")
+let solution = document.getElementById("solution");
+let solutionLine = document.getElementById("solutionLine");
+let firstLetterSwitch = document.getElementById('switch');
 let maxAttempt = 6;
 let ligneActuelle = 0;
 let saisie = "";
@@ -151,7 +152,7 @@ function displayWordInGrid(saisie, motRandom) {
         cell.style.backgroundColor = "#D5BB56";
         cell.style.color = "white";
       } else {
-        cell.style.backgroundColor = "lightgrey";
+        cell.style.backgroundColor = "gray";
         cell.style.color = "white";
       }
     }, i * 150);
@@ -163,8 +164,11 @@ function displayWordInGrid(saisie, motRandom) {
       h2.textContent = "Perdu :(";
       h2.style.display = "block";
       userInput.disabled = true;
+      userInput.style.display = "none";
       replayButton.style.display = "block";
       solutionLine.style.display = "block"
+      firstLetterSwitch.style.display = "none"
+
       return;
     }
 
@@ -173,7 +177,10 @@ function displayWordInGrid(saisie, motRandom) {
       h2.textContent = "Gagné!";
       h2.style.display = "block";
       userInput.disabled = true;
+      userInput.style.display = "none";
       replayButton.style.display = "block";
+      firstLetterSwitch.style.display = "none"
+
       return;
     }
     ligneActuelle++;

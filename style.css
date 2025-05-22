@@ -129,7 +129,7 @@ p{
   height: var(--cell-height-width);
   line-height: var(--cell-height-width);
   border: 1px solid #111;
-  border-radius: 10px;
+  border-radius: 2px;
   text-align: center;
   font-size: calc(var(--cell-height-width) / 2);
 }
